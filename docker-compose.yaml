@@ -1,0 +1,16 @@
+version: "3.1"
+
+services:
+  mydb:
+    image: postgres
+    container_name: mydb
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: hytg46der
+    volumes:
+      - mydb_volume:/var/lib/postgresql/data
+
+volumes:
+  mydb_volume:
